@@ -1,92 +1,160 @@
+type SocialLinks = {
+  email: string;
+  linkedin?: string;
+  twitter?: string;
+  github?: string;
+};
+
+type Experience = {
+  company: string;
+  title: string;
+  dateRange: string;
+  bullets: string[];
+};
+
+type Education = {
+  school: string;
+  degree: string;
+  dateRange: string;
+  achievements: string[];
+};
+
+type Project = {
+  name: string;
+  description: string;
+  link: string;
+  skills: string[];
+};
+
+type Certification = {
+  title: string;
+  provider: string;
+  date: string;
+};
+
+type Language = {
+  language: string;
+  level: string;
+};
+
 export const siteConfig = {
-  name: "Ryan Fitzgerald",
-  title: "Senior Software Engineer",
-  description: "Portfolio website of Ryan Fitzgerald",
-  accentColor: "#1d4ed8",
+  name: "Mohammad Khalid Azizi",
+  title: "Senior Family Medicine Specialist",
+  description:
+    "Professional medical profile of Dr. Mohammad Khalid Azizi with extensive clinical and hospital experience",
+  accentColor: "#073ded",
+
   social: {
-    email: "your-email@example.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "https://x.com/rfitzio",
-    github: "https://github.com/RyanFitzgerald",
-  },
+    email: "Khalidzz991@gmail.com",
+  } as SocialLinks,
+
   aboutMe:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos asperiores nihil consequatur tempore cupiditate architecto natus commodi corrupti quas quasi facere est, dignissimos odit nam veniam sapiente ut, vitae eligendi ipsum dolor, nostrum ullam impedit! Corrupti ratione mollitia temporibus necessitatibus, consectetur reiciendis recusandae id, dolorum quaerat, vero pariatur. Ratione!",
-  skills: ["Javascript", "React", "Node.js", "Python", "AWS", "Docker"],
+    "Experienced medical doctor and family medicine specialist with over 10 years of clinical experience in hospital and primary healthcare environments. Skilled in diagnosis, treatment planning, surgical assistance, and patient management across OPD and IPD settings. Strong ability to work under pressure, collaborate with medical teams, and deliver high-quality patient care.",
+
+  coreCompetencies: [
+    "Clinical Diagnosis & Treatment",
+    "Primary Healthcare",
+    "Emergency & Trauma Care",
+    "Surgical Assistance",
+    "Patient Monitoring",
+    "Infection Control",
+  ],
+
+  skills: [
+    "Patient Diagnosis",
+    "Treatment Planning",
+    "Emergency Care",
+    "Surgery Assistance",
+    "Medical Documentation",
+    "MS Word",
+    "MS Excel",
+  ],
+
+  languages: [
+    { language: "Pashto", level: "Fluent" },
+    { language: "Dari", level: "Fluent" },
+    { language: "English", level: "Intermediate" },
+  ] as Language[],
+
+  certifications: [
+    {
+      title: "Orthopedic Surgery & Traumatology Training",
+      provider: "Inje University & Seoul Paik Hospital, South Korea",
+      date: "2011",
+    },
+    {
+      title: "Infection Prevention Training",
+      provider: "SCA",
+      date: "2007",
+    },
+    {
+      title: "Mental Health Training",
+      provider: "SCA",
+      date: "2008",
+    },
+  ] as Certification[],
+
   projects: [
     {
-      name: "AI Dev Roundup Newsletter",
+      name: "Hospital Patient Care & Surgical Support",
       description:
-        "One concise email. Five minutes. Every Tuesday. Essential AI news & trends, production-ready libraries, powerful AI tools, and real-world code examples",
-      link: "https://aidevroundup.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Managed patient diagnosis, treatment, and surgical assistance across multiple departments.",
+      link: "",
+      skills: ["Clinical Care", "Surgery", "Patient Monitoring"],
     },
-    {
-      name: "Chrome Extension Mastery: Build Full-Stack Extensions with React & Node.js",
-      description:
-        "Master the art of building production-ready, full-stack Chrome Extensions using modern web technologies and best practices",
-      link: "https://fullstackextensions.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
-    },
-    {
-      name: "ExtensionKit",
-      description:
-        "Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates & examples",
-      link: "https://extensionkit.io/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
-    },
-  ],
+  ] as Project[],
+
   experience: [
     {
-      company: "Tech Company",
-      title: "Senior Software Engineer",
-      dateRange: "Jan 2022 - Present",
+      company: "Cure International Hospital, Kabul",
+      title: "Family Medicine Resident",
+      dateRange: "2017 - 2020",
       bullets: [
-        "Led development of microservices architecture serving 1M+ users",
-        "Reduced API response times by 40% through optimization",
-        "Mentored team of 5 junior developers",
+        "Completed specialization in family medicine",
+        "Managed diagnosis and treatment of patients",
+        "Participated in case conferences and hospital programs",
       ],
     },
     {
-      company: "Startup Inc",
-      title: "Full Stack Developer",
-      dateRange: "Jun 2020 - Dec 2021",
+      company: "Bagram Korean Hospital",
+      title: "MD Doctor",
+      dateRange: "2010 - 2015",
       bullets: [
-        "Built and launched MVP product from scratch using React and Node.js",
-        "Implemented CI/CD pipeline reducing deployment time by 60%",
-        "Collaborated with product team to define technical requirements",
+        "Handled OPD and IPD patient care",
+        "Assisted in surgeries including orthopedic and C-section",
+        "Provided pre and post operative care",
       ],
     },
     {
-      company: "Digital Agency",
-      title: "Frontend Developer",
-      dateRange: "Aug 2018 - May 2020",
+      company: "SCA Health Center",
+      title: "MD Doctor + Health Coordinator",
+      dateRange: "2007 - 2009",
       bullets: [
-        "Developed responsive web applications for 20+ clients",
-        "Improved site performance scores by 35% on average",
-        "Introduced modern JavaScript frameworks to legacy codebases",
+        "Provided primary healthcare services",
+        "Diagnosed and treated patients",
+        "Prescribed medication and preventive care",
       ],
     },
-  ],
+  ] as Experience[],
+
   education: [
     {
-      school: "University Name",
-      degree: "Bachelor of Science in Computer Science",
-      dateRange: "2014 - 2018",
-      achievements: [
-        "Graduated Magna Cum Laude with 3.8 GPA",
-        "Dean's List all semesters",
-        "President of Computer Science Club",
-      ],
+      school: "Cure International Hospital, Kabul",
+      degree: "Family Medicine Specialist",
+      dateRange: "2017 - 2020",
+      achievements: ["Specialist Certificate"],
     },
     {
-      school: "Online Platform",
-      degree: "Full Stack Development Certificate",
-      dateRange: "2019",
-      achievements: [
-        "Completed 500+ hours of coursework",
-        "Built 10+ portfolio projects",
-        "Specialized in React and Node.js",
-      ],
+      school: "Kabul Medical University",
+      degree: "Doctor of Medicine (MD)",
+      dateRange: "1998 - 2006",
+      achievements: ["MD Certificate"],
     },
-  ],
+    {
+      school: "Omar-e-Farooq High School",
+      degree: "Baccalaureate",
+      dateRange: "1984 - 1996",
+      achievements: ["Certificate"],
+    },
+  ] as Education[],
 };
